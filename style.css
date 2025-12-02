@@ -188,7 +188,7 @@ span{
     content: "";
     background-color: black;
     position: absolute;
-    width: calc(80% + 8px);
+    width: calc(100% + 8px);
     height: 70%;
     border-left: 3px solid black;
     right: -8;
@@ -238,3 +238,4 @@ span{
     }
 
 }
+
