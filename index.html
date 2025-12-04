@@ -38,7 +38,7 @@
             overflow-x: hidden;
         }
 
-        /* HEADER */
+        /* --- HEADER --- */
         header {
             position: fixed;
             top: 0;
@@ -87,13 +87,23 @@
             cursor: pointer;
         }
 
-        /* SECTIONS */
+        /* --- SECTIONS GERAIS --- */
         section {
             min-height: 100vh;
             padding: 10rem 9% 2rem;
         }
 
-        /* HOME */
+        .heading {
+            text-align: center;
+            font-size: 5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .heading span {
+            color: var(--main-color);
+        }
+
+        /* --- HOME --- */
         .home {
             display: flex;
             justify-content: center;
@@ -117,14 +127,22 @@
             margin-bottom: 2rem;
         }
 
+        .typing-text {
+            color: var(--main-color);
+        }
+        
+        .typed-cursor {
+            color: var(--text-color);
+            font-size: 3.2rem;
+        }
+
         .home-content p {
             font-size: 1.6rem;
         }
 
         .home-img img {
             width: 35vw;
-            border-radius: 6%;
-            
+            border-radius: 10%;
             cursor: pointer;
             transition: 0.4s ease;
         }
@@ -133,7 +151,6 @@
             box-shadow: 0 0 50px var(--main-color);
         }
 
-        /* Social Icons */
         .social-icons a {
             display: inline-flex;
             justify-content: center;
@@ -156,7 +173,6 @@
             transform: scale(1.1) translateY(-5px);
         }
 
-        /* Botão */
         .btn {
             display: inline-block;
             padding: 1rem 2.8rem;
@@ -178,18 +194,7 @@
             box-shadow: 0 0 25px var(--main-color);
         }
 
-        /* Efeito de Digitação */
-        .typing-text {
-            color: var(--main-color);
-        }
-        
-        /* Cursor piscando */
-        .typed-cursor {
-            color: var(--text-color);
-            font-size: 3.2rem;
-        }
-
-        /* SERVICES / PORTFOLIO */
+        /* --- TRABALHOS (PORTFOLIO) --- */
         .services {
             background: var(--second-bg-color);
         }
@@ -206,7 +211,6 @@
             color: var(--main-color);
         }
 
-        /* Grid System */
         .portfolio-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -233,7 +237,157 @@
             transform: scale(1.1);
         }
 
-        /* RESPONSIVIDADE */
+        /* --- HABILIDADES --- */
+        .skills {
+            background: var(--bg-color);
+        }
+
+        .skills-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5rem;
+        }
+
+        .skills-column {
+            flex: 1 1 40rem;
+        }
+
+        .skills-column .title {
+            font-size: 2.5rem;
+            margin: 0 0 1.5rem;
+            color: var(--text-color);
+        }
+
+        .skills-box {
+            position: relative;
+            border-radius: 2rem;
+            border: .2rem solid var(--main-color);
+            padding: 3rem 2rem 4rem;
+            background: transparent;
+        }
+
+        .skills-content .progress {
+            padding: 1rem 0;
+        }
+
+        .skills-content .progress h3 {
+            font-size: 1.7rem;
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .skills-content .progress h3 span {
+            color: var(--text-color);
+            font-weight: 400;
+            font-size: 1.4rem;
+        }
+
+        .skills-content .progress .bar {
+            height: 2rem;
+            border-radius: 1rem;
+            border: .2rem solid var(--main-color);
+            padding: .2rem; 
+            background: transparent;
+        }
+
+        .skills-content .progress .bar span {
+            display: block;
+            height: 100%;
+            border-radius: 1rem;
+            background: var(--main-color);
+        }
+
+        /* --- EDUCAÇÃO --- */
+        .education {
+            background: var(--second-bg-color);
+        }
+
+        .education-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .education-box {
+            flex: 1 1 30rem;
+            background: var(--bg-color);
+            padding: 3rem 2rem 4rem;
+            border-radius: 2rem;
+            text-align: center;
+            border: .2rem solid var(--main-color);
+            transition: .5s ease;
+        }
+
+        .education-box:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 1rem var(--main-color);
+        }
+
+        .education-box i {
+            font-size: 5rem;
+            color: var(--main-color);
+            margin-bottom: 1rem;
+        }
+
+        .education-box h3 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .education-box p {
+            font-size: 1.6rem;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* --- CONTATO --- */
+        .contact {
+            background: var(--bg-color);
+        }
+
+        .contact form {
+            max-width: 70rem;
+            margin: 1rem auto;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .contact form .input-box {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .contact form .input-box input,
+        .contact form textarea {
+            width: 100%;
+            padding: 1.5rem;
+            font-size: 1.6rem;
+            color: var(--text-color);
+            background: var(--second-bg-color);
+            border-radius: .8rem;
+            margin: .7rem 0;
+        }
+
+        .contact form .input-box input {
+            width: 49%;
+        }
+
+        .contact form textarea {
+            resize: none;
+            height: 200px;
+        }
+
+        .contact form .btn {
+            margin-top: 2rem;
+            cursor: pointer;
+        }
+
+        /* --- RESPONSIVIDADE --- */
         @media (max-width: 995px) {
             header { padding: 2rem 4%; }
             section { padding: 10rem 4% 2rem; }
@@ -253,10 +407,10 @@
                 padding: 1rem 3%;
                 background: var(--second-bg-color);
                 border-top: .1rem solid rgba(0,0,0,.2);
-                display: none; /* Escondido por padrão */
+                display: none;
             }
             
-            .navbar.active { display: block; } /* Mostra quando clica */
+            .navbar.active { display: block; }
             
             .navbar a {
                 display: block;
@@ -264,12 +418,17 @@
                 margin: 3rem 0;
             }
         }
+
+        @media (max-width: 617px) {
+            .contact form .input-box input {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <a href="#" class="logo">Jeová Igor</a>
-
         <i class="fa-solid fa-bars" id="menu-icon"></i>
 
         <nav class="navbar">
@@ -298,7 +457,7 @@
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
                 <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
-            <a href="#" class="btn">Trabalhe Comigo!</a>
+            <a href="#contact" class="btn">Trabalhe Comigo!</a>
         </div>
     </section>
 
@@ -326,21 +485,107 @@
         </div>
     </section>
 
+    <section class="skills" id="skills">
+        <h2 class="heading">Minhas <span>Habilidades</span></h2>
+
+        <div class="skills-row">
+            
+            <div class="skills-column">
+                <h3 class="title">Criação & Design</h3>
+
+                <div class="skills-box">
+                    <div class="skills-content">
+                        
+                        <div class="progress">
+                            <h3>Design Gráfico <span>95% (Experiente)</span></h3>
+                            <div class="bar"><span style="width: 95%"></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3>Designer UI/UX <span>65% (Intermediário)</span></h3>
+                            <div class="bar"><span style="width: 65%"></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3>Edição de Imagens <span>70% (Intermediário)</span></h3>
+                            <div class="bar"><span style="width: 70%"></span></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-column">
+                <h3 class="title">Mídia & Audiovisual</h3>
+
+                <div class="skills-box">
+                    <div class="skills-content">
+
+                        <div class="progress">
+                            <h3>Edição de Vídeo <span>60% (Intermediário)</span></h3>
+                            <div class="bar"><span style="width: 60%"></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3>Captura de Imagens <span>75% (Intermediário)</span></h3>
+                            <div class="bar"><span style="width: 75%"></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3>Mídias Sociais <span>60% (Intermediário)</span></h3>
+                            <div class="bar"><span style="width: 60%"></span></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="education" id="education">
+        <h2 class="heading">Minha <span>Formação</span></h2>
+
+        <div class="education-row">
+            <div class="education-box">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h3>Licenciatura em Computação</h3>
+                <p>IFTO - Instituto Federal de Educação, Ciência e Tecnologia do Tocantins</p>
+                <p style="margin-top: 10px; font-size: 1.4rem; color: #aaa;">Graduação Completa</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Entre em <span>Contato</span></h2>
+
+        <form action="#" method="POST">
+            <div class="input-box">
+                <input type="text" placeholder="Nome Completo" required>
+                <input type="email" placeholder="Endereço de Email" required>
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="Número de Celular">
+                <input type="text" placeholder="Assunto do Email">
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Sua Mensagem" required></textarea>
+            <input type="submit" value="Enviar Mensagem" class="btn">
+        </form>
+    </section>
+
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     
     <script>
-        // Aguarda a página carregar para rodar o script
         document.addEventListener('DOMContentLoaded', function() {
             
-            /* === Efeito de Digitação === */
+            /* === TEXTO DIGITADO === */
             var typed = new Typed('.typing-text', {
                 strings: [
-                    'Design de UI/UX', 
+                    'Design Gráfico', 
+                    'Design UI/UX', 
                     'Edição de Imagens', 
                     'Edição de Vídeo', 
                     'Captura de Imagens', 
-                    'Mídias Sociais',
-                    'Design Gráfico'
+                    'Mídias Sociais'
                 ],
                 typeSpeed: 70,
                 backSpeed: 50,
@@ -348,7 +593,7 @@
                 loop: true
             });
 
-            /* === Menu Mobile === */
+            /* === MENU MOBILE === */
             let menuIcon = document.querySelector('#menu-icon');
             let navbar = document.querySelector('.navbar');
 
